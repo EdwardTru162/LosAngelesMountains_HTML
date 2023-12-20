@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en">
+<body>
+    <div id="container">
+    <img id= "title_image" src = "titlemountains.png" alt = "Los Angeles Mountains"
+    </div>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        #title_image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+
+    <script>
+        const container = document.getElementById('container');
+        const image = document.getElementById('title_image');
+
+        function setContainerSize() {
+            const imageWidth = image.width;
+            const imageHeight = image.height;
+
+            container.style.width = '${imageWidth}px';
+            container.style.height = '${imageHeight}px';
+        }
+        window.addEventListener('resize', setContainerSize);
+        setContainerSize();
+    </script>
+ 
+</body>
+</html>
